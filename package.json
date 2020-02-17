@@ -1,0 +1,12 @@
+{
+  "name": "maratonaDev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Sadrakss/doe.git",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "flow": "^0.2.3",
+    "git": "^0.1.5"
+  }
+}
