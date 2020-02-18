@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate life! donate blood.</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <img
-        class="logo"
-        src="logo.png" alt="donate image">
+        <img class="logo" src="/logo.png" alt="donate image">
         <h2>Your Donation matters</h2>
         <p>Up to 3 lives with a donation</p>
         <p>More than 30.000 donations are needed every day</p>
@@ -24,8 +22,8 @@
 
     <section class="form hide">
         <h2>Enter the donor list</h2>
-        <form action="/">
-            <input type="text" name="" placeholder="full name">
+        <form action="/" method="POST">
+            <input type="text" name="name" placeholder="full name">
 
             <input type="text" name="email" placeholder="email">
 
@@ -39,32 +37,21 @@
         <h2>Last <span>Donates</span> </h2>
 
         <section class="donors">
+
+            {% for donor in donors %}
             <div class="donor">
-                <div class="blood">AB+</div>
-                <p>Diego Fernandes</p>
+                <div class="blood">{{donor.blood}}+</div>
+                <p>{{donor.name}}</p>
             </div>
-    
-            <div class="donor">
-                <div class="blood">AB</div>
-                <p>Mayk Brito</p>
-            </div>
-    
-            <div class="donor">
-                <div class="blood">B+</div>
-                <p>Sadrak s sousa</p>
-            </div>
-    
-            <div class="donor">
-                <div class="blood">O</div>
-                <p>Tafarel barganha</p>
-            </div>
+            {%endfor%}
+
         </section>
 
     </main>
-    
-    <footer>Com ❤ Sadrak!</footer>
 
-    <script src="scripts.js"></script>
+    <footer>Com ❤️ Sadrak!</footer>
+
+    <script src="/scripts.js"></script>
 </body>
 
 </html>
